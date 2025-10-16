@@ -239,15 +239,6 @@ MyTask_IS_TOP_LEVEL:STATIC=ON
 //Value Computed by CMake
 MyTask_SOURCE_DIR:STATIC=/Users/alexey/task
 
-//Value Computed by CMake
-Project_BINARY_DIR:STATIC=/Users/alexey/task/build
-
-//Value Computed by CMake
-Project_IS_TOP_LEVEL:STATIC=ON
-
-//Value Computed by CMake
-Project_SOURCE_DIR:STATIC=/Users/alexey/task
-
 
 ########################
 # INTERNAL cache entries
