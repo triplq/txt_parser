@@ -6,4 +6,4 @@ project(MyTask)
 
 configure_file(${CMAKE_SOURCE_DIR}/text.txt ${CMAKE_BINARY_DIR}/text.txt COPYONLY)
 
-add_executable(MyTask main.cpp text.txt)
+add_executable(MyTask main.cpp Person.h Person.cpp)

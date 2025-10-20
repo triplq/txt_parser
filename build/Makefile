@@ -129,6 +129,30 @@ MyTask/fast:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/MyTask.dir/build.make CMakeFiles/MyTask.dir/build
 .PHONY : MyTask/fast
 
+Person.o: Person.cpp.o
+.PHONY : Person.o
+
+# target to build an object file
+Person.cpp.o:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/MyTask.dir/build.make CMakeFiles/MyTask.dir/Person.cpp.o
+.PHONY : Person.cpp.o
+
+Person.i: Person.cpp.i
+.PHONY : Person.i
+
+# target to preprocess a source file
+Person.cpp.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/MyTask.dir/build.make CMakeFiles/MyTask.dir/Person.cpp.i
+.PHONY : Person.cpp.i
+
+Person.s: Person.cpp.s
+.PHONY : Person.s
+
+# target to generate assembly for a file
+Person.cpp.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/MyTask.dir/build.make CMakeFiles/MyTask.dir/Person.cpp.s
+.PHONY : Person.cpp.s
+
 main.o: main.cpp.o
 .PHONY : main.o
 
@@ -162,6 +186,9 @@ help:
 	@echo "... edit_cache"
 	@echo "... rebuild_cache"
 	@echo "... MyTask"
+	@echo "... Person.o"
+	@echo "... Person.i"
+	@echo "... Person.s"
 	@echo "... main.o"
 	@echo "... main.i"
 	@echo "... main.s"

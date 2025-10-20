@@ -85,12 +85,12 @@ clean: CMakeFiles/MyTask.dir/clean
 CMakeFiles/MyTask.dir/all:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/MyTask.dir/build.make CMakeFiles/MyTask.dir/depend
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/MyTask.dir/build.make CMakeFiles/MyTask.dir/build
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --progress-dir=/Users/alexey/task/build/CMakeFiles --progress-num=1,2 "Built target MyTask"
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --progress-dir=/Users/alexey/task/build/CMakeFiles --progress-num=1,2,3 "Built target MyTask"
 .PHONY : CMakeFiles/MyTask.dir/all
 
 # Build rule for subdir invocation for target.
 CMakeFiles/MyTask.dir/rule: cmake_check_build_system
-	$(CMAKE_COMMAND) -E cmake_progress_start /Users/alexey/task/build/CMakeFiles 2
+	$(CMAKE_COMMAND) -E cmake_progress_start /Users/alexey/task/build/CMakeFiles 3
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 CMakeFiles/MyTask.dir/all
 	$(CMAKE_COMMAND) -E cmake_progress_start /Users/alexey/task/build/CMakeFiles 0
 .PHONY : CMakeFiles/MyTask.dir/rule
@@ -102,7 +102,7 @@ MyTask: CMakeFiles/MyTask.dir/rule
 # codegen rule for target.
 CMakeFiles/MyTask.dir/codegen:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/MyTask.dir/build.make CMakeFiles/MyTask.dir/codegen
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --progress-dir=/Users/alexey/task/build/CMakeFiles --progress-num=1,2 "Finished codegen for target MyTask"
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --progress-dir=/Users/alexey/task/build/CMakeFiles --progress-num=1,2,3 "Finished codegen for target MyTask"
 .PHONY : CMakeFiles/MyTask.dir/codegen
 
 # clean rule for target.

@@ -8,6 +8,7 @@ set(CMAKE_DEPENDS_LANGUAGES
 
 # The set of dependency files which are needed:
 set(CMAKE_DEPENDS_DEPENDENCY_FILES
+  "/Users/alexey/task/Person.cpp" "CMakeFiles/MyTask.dir/Person.cpp.o" "gcc" "CMakeFiles/MyTask.dir/Person.cpp.o.d"
   "/Users/alexey/task/main.cpp" "CMakeFiles/MyTask.dir/main.cpp.o" "gcc" "CMakeFiles/MyTask.dir/main.cpp.o.d"
   )
 
