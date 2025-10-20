@@ -1,6 +1,6 @@
 #include "Person.h"
 
-Person::Person(std::string& n, std::string& sn, int& d, int& m, int& y) : name_(n), surname_(sn){ 
+Person::Person(std::string n, std::string sn, int& d, int& m, int& y) : name_(n), surname_(sn){ 
     if(!isValid(d, m, y))
         throw "Not valid data!";
 

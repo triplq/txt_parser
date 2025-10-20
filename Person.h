@@ -14,7 +14,7 @@ private:
     bool isValid(int&, int& , int&);
     
 public:
-    Person(std::string&, std::string&, int&, int&, int&);
+    Person(std::string, std::string, int&, int&, int&);
 
     int day() const;
     int month() const;
@@ -23,3 +23,5 @@ public:
     std::string surname() const;
     std::string getData() const;
 };
+
+std::ostream& operator<<(std::ostream& stream, const Person& pers);
