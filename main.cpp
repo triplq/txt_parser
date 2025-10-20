@@ -1,14 +1,13 @@
 #include <iostream>
 #include <fstream>
 #include "Person.h"
+#include <thread>
 
 using namespace std;
 
-int main(){
+void parse_file(string& file_name, vector<Person>& perses){
     ifstream in;
-    in.open("text.txt");
-
-    vector<Person> perses;
+    in.open(file_name);
 
     if(in.is_open()){
         string line;
@@ -29,8 +28,27 @@ int main(){
         cout << "Not open\n";
 
     in.close();
+}
 
-    for(const auto& ps: perses)
+int main(){
+
+    array<thread, 2> th;
+    string file_1{"student_file_1.txt"};
+    string file_2{"student_file_2.txt"};
+
+    vector<Person> perses_file_1;
+    vector<Person> perses_file_2;
+
+    th[0] = thread(parse_file, ref(file_1), ref(perses_file_1));
+    th[1] = thread(parse_file, ref(file_2), ref(perses_file_2));
+
+    th[0].join();
+    th[1].join();
+
+    for(const auto& ps: perses_file_1)
+        cout << ps << '\n';
+
+    for(const auto& ps : perses_file_2)
         cout << ps << '\n';
 
     return 0;
