@@ -49,14 +49,10 @@ void BubbleSort(vector<T>& vec){
 
 vector<Person> only_unique(const vector<Person>& pers1, const vector<Person>& pers2){
     map<Person, size_t> big_pers_file;
-    for(size_t i = 0; i  < pers1.size(); i++){
-        if(!(big_pers_file.insert({pers1[i], 1})).second)
-            big_pers_file.insert_or_assign(pers1[i], 2);
-    }
-    for(size_t i = 0; i < pers2.size(); i++){
-        if(!(big_pers_file.insert({pers2[i], 1})).second)
-            big_pers_file.insert_or_assign(pers2[i], 2);
-    }
+    for(size_t i = 0; i  < pers1.size(); i++)
+        big_pers_file.insert({pers1[i], 1});
+    for(size_t i = 0; i < pers2.size(); i++)
+        big_pers_file.insert({pers2[i], 1});
 
     vector<Person> data_to_return;
     for(const auto& elem : big_pers_file){
