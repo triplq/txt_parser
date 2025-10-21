@@ -2,7 +2,7 @@
 #include <fstream>
 #include "Person.h"
 #include <thread>
-#include <algorithm>
+#include <map>
 
 using namespace std;
 
@@ -47,11 +47,24 @@ void BubbleSort(vector<T>& vec){
     }
 }
 
-vector<Person> deleting_same(vector<Person>& pers1, vector<Person>& pers2){
-    BubbleSort(pers1);
-    BubbleSort(pers2);
+vector<Person> only_unique(const vector<Person>& pers1, const vector<Person>& pers2){
+    map<Person, size_t> big_pers_file;
+    for(size_t i = 0; i  < pers1.size(); i++){
+        if(!(big_pers_file.insert({pers1[i], 1})).second)
+            big_pers_file.insert_or_assign(pers1[i], 2);
+    }
+    for(size_t i = 0; i < pers2.size(); i++){
+        if(!(big_pers_file.insert({pers2[i], 1})).second)
+            big_pers_file.insert_or_assign(pers2[i], 2);
+    }
 
-    return pers1;
+    vector<Person> data_to_return;
+    for(const auto& elem : big_pers_file){
+            data_to_return.push_back(elem.first);
+    }
+
+    return data_to_return;
+
 }
 
 int main(){
@@ -68,11 +81,9 @@ int main(){
     th[0].join();
     th[1].join();
 
-    BubbleSort(perses_file_1);
+    vector<Person> file_to_send = only_unique(perses_file_1, perses_file_2);
 
-    // vector<Person> file_to_send = deleting_same(perses_file_1, perses_file_2);
-
-    for(const auto& ps: perses_file_1){
+    for(const auto& ps: file_to_send){
         cout << ps << '\n';
     }
 

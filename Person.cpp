@@ -24,12 +24,23 @@ std::string Person::name() const{ return name_; };
 std::string Person::surname() const{ return surname_; };
 std::string Person::getData() const{ return std::to_string(day_) + '.' + std::to_string(month_) + '.' + std::to_string(year_); };
 
-bool Person::operator==(const Person& other){
-    return name_ + surname_  == other.name() + other.surname() && this->getData() == other.getData();
+bool Person::operator==(const Person& other) const{
+    return name_ + surname_ == other.name() + other.surname() && this->getData() == other.getData();
 }
 
-bool Person::operator<(const Person& other){
+bool Person::operator!=(const Person& other) const{
+    return name_ + surname_ != other.name() + other.surname() || this->getData() != other.getData();
+}
+
+bool Person::operator<(const Person& other) const{
     if((name_ + surname_ < other.name() + other.surname()) || (name_ + surname_ == other.name() + other.surname() && this->getData() < other.getData()))
+        return true;
+    else
+        return false;
+};
+
+bool Person::operator>(const Person& other) const{
+    if((name_ + surname_ > other.name() + other.surname()) || (name_ + surname_ == other.name() + other.surname() && this->getData() > other.getData()))
         return true;
     else
         return false;
