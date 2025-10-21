@@ -31,22 +31,6 @@ void parse_file(string& file_name, vector<Person>& perses){
     in.close();
 }
 
-template<typename T>
-void BubbleSort(vector<T>& vec){
-    bool swapped;
-    for(size_t i = 0; i < vec.size(); i++){
-        swapped = false;
-        for(size_t j = 0; j < vec.size()-i-1; j++){
-            if(vec[j+1] < vec[j]){
-                swap(vec[j+1], vec[j]);
-                swapped = true;
-            }
-        }
-        if(!swapped)
-            break;
-    }
-}
-
 vector<Person> only_unique(const vector<Person>& pers1, const vector<Person>& pers2){
     map<Person, size_t> big_pers_file;
     for(size_t i = 0; i  < pers1.size(); i++)
@@ -63,6 +47,21 @@ vector<Person> only_unique(const vector<Person>& pers1, const vector<Person>& pe
 
 }
 
+void to_file(const vector<Person>& vec){
+    ofstream out;
+    out.open("send.txt");
+
+    if(out.is_open()){
+        for(size_t i = 0; i < vec.size(); i++){
+            out << i+1 << ' ' << vec[i] << '\n';
+        }
+    }
+    else
+        cout << "Can't open\n";
+
+    out.close();
+}
+
 int main(){
     string file_1{"student_file_1.txt"};
     string file_2{"student_file_2.txt"};
@@ -77,11 +76,9 @@ int main(){
     th[0].join();
     th[1].join();
 
-    vector<Person> file_to_send = only_unique(perses_file_1, perses_file_2);
+    vector<Person> vec_to_send = only_unique(perses_file_1, perses_file_2);
 
-    for(const auto& ps: file_to_send){
-        cout << ps << '\n';
-    }
+    to_file(vec_to_send);
 
     return 0;
 }
