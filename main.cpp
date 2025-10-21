@@ -36,10 +36,10 @@ void BubbleSort(vector<T>& vec){
     bool swapped;
     for(size_t i = 0; i < vec.size(); i++){
         swapped = false;
-        for(size_t j = 0; j < vec.size()-i-1; i++){
+        for(size_t j = 0; j < vec.size()-i-1; j++){
             if(vec[j+1] < vec[j]){
+                swap(vec[j+1], vec[j]);
                 swapped = true;
-                swap(vec[j], vec[j+1]);
             }
         }
         if(!swapped)
@@ -68,7 +68,13 @@ int main(){
     th[0].join();
     th[1].join();
 
-    vector<Person> file_to_send = deleting_same(perses_file_1, perses_file_2);
+    BubbleSort(perses_file_1);
+
+    // vector<Person> file_to_send = deleting_same(perses_file_1, perses_file_2);
+
+    for(const auto& ps: perses_file_1){
+        cout << ps << '\n';
+    }
 
     return 0;
 }

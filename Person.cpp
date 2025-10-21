@@ -29,10 +29,10 @@ bool Person::operator==(const Person& other){
 }
 
 bool Person::operator<(const Person& other){
-    if(name_ + surname_ < other.name() + other.surname())
+    if((name_ + surname_ < other.name() + other.surname()) || (name_ + surname_ == other.name() + other.surname() && this->getData() < other.getData()))
         return true;
-    else if(name_ + surname_ == other.name() + other.surname() && this->getData() < other.getData())
-        return true;
+    else
+        return false;
 };
 
 std::ostream& operator<<(std::ostream& stream, const Person& pers){
