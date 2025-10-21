@@ -24,6 +24,17 @@ std::string Person::name() const{ return name_; };
 std::string Person::surname() const{ return surname_; };
 std::string Person::getData() const{ return std::to_string(day_) + '.' + std::to_string(month_) + '.' + std::to_string(year_); };
 
+bool Person::operator==(const Person& other){
+    return name_ + surname_  == other.name() + other.surname() && this->getData() == other.getData();
+}
+
+bool Person::operator<(const Person& other){
+    if(name_ + surname_ < other.name() + other.surname())
+        return true;
+    else if(name_ + surname_ == other.name() + other.surname() && this->getData() < other.getData())
+        return true;
+};
+
 std::ostream& operator<<(std::ostream& stream, const Person& pers){
     stream << pers.name() << ' ' << pers.surname() << ' ' << pers.getData();
     return stream;

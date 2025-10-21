@@ -22,6 +22,9 @@ public:
     std::string name() const;
     std::string surname() const;
     std::string getData() const;
+
+    bool operator == (const Person& other);
+    bool operator < (const Person& other);
 };
 
 std::ostream& operator<<(std::ostream& stream, const Person& pers);
