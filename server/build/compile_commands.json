@@ -1,0 +1,14 @@
+[
+{
+  "directory": "/Users/alexey/task/server/build",
+  "command": "/usr/bin/clang++ -DZMQ_BUILD_DRAFT_API -g -std=gnu++20 -arch arm64 -o CMakeFiles/server.dir/main.cpp.o -c /Users/alexey/task/server/main.cpp",
+  "file": "/Users/alexey/task/server/main.cpp",
+  "output": "/Users/alexey/task/server/build/CMakeFiles/server.dir/main.cpp.o"
+},
+{
+  "directory": "/Users/alexey/task/server/build",
+  "command": "/usr/bin/clang++ -DZMQ_BUILD_DRAFT_API -g -std=gnu++20 -arch arm64 -o CMakeFiles/server.dir/Person.cpp.o -c /Users/alexey/task/server/Person.cpp",
+  "file": "/Users/alexey/task/server/Person.cpp",
+  "output": "/Users/alexey/task/server/build/CMakeFiles/server.dir/Person.cpp.o"
+}
+]

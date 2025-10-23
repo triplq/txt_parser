@@ -1,1 +1,0 @@
-/usr/bin/c++ -g -arch arm64 -Wl,-search_paths_first -Wl,-headerpad_max_install_names CMakeFiles/MyTask.dir/main.cpp.o CMakeFiles/MyTask.dir/Person.cpp.o -o MyTask  -Wl,-rpath,/usr/local/lib /usr/local/lib/libzmq.5.2.6.dylib /opt/homebrew/Cellar/gnutls/3.8.10/lib/libgnutls.dylib
