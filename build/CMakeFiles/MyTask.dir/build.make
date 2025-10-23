@@ -111,6 +111,8 @@ MyTask_EXTERNAL_OBJECTS =
 MyTask: CMakeFiles/MyTask.dir/main.cpp.o
 MyTask: CMakeFiles/MyTask.dir/Person.cpp.o
 MyTask: CMakeFiles/MyTask.dir/build.make
+MyTask: /usr/local/lib/libzmq.5.2.6.dylib
+MyTask: /opt/homebrew/Cellar/gnutls/3.8.10/lib/libgnutls.dylib
 MyTask: CMakeFiles/MyTask.dir/link.txt
 	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --bold --progress-dir=/Users/alexey/task/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_3) "Linking CXX executable MyTask"
 	$(CMAKE_COMMAND) -E cmake_link_script CMakeFiles/MyTask.dir/link.txt --verbose=$(VERBOSE)

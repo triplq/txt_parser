@@ -91,7 +91,7 @@
 				}
 			],
 			"type" : "INTERNAL",
-			"value" : "0"
+			"value" : "2"
 		},
 		{
 			"name" : "CMAKE_COLOR_MAKEFILE",
@@ -158,7 +158,7 @@
 					"value" : "CXX compiler"
 				}
 			],
-			"type" : "FILEPATH",
+			"type" : "STRING",
 			"value" : "/usr/bin/c++"
 		},
 		{
@@ -254,7 +254,7 @@
 					"value" : "C compiler"
 				}
 			],
-			"type" : "FILEPATH",
+			"type" : "STRING",
 			"value" : "/usr/bin/cc"
 		},
 		{
@@ -1252,6 +1252,30 @@
 			],
 			"type" : "STATIC",
 			"value" : "/Users/alexey/task"
+		},
+		{
+			"name" : "ZeroMQ_DIR",
+			"properties" : 
+			[
+				{
+					"name" : "HELPSTRING",
+					"value" : "The directory containing a CMake configuration file for ZeroMQ."
+				}
+			],
+			"type" : "PATH",
+			"value" : "/usr/local/lib/cmake/ZeroMQ"
+		},
+		{
+			"name" : "cppzmq_DIR",
+			"properties" : 
+			[
+				{
+					"name" : "HELPSTRING",
+					"value" : "The directory containing a CMake configuration file for cppzmq."
+				}
+			],
+			"type" : "PATH",
+			"value" : "/usr/local/share/cmake/cppzmq"
 		}
 	],
 	"kind" : "cache",

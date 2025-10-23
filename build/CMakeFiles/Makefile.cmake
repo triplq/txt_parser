@@ -8,14 +8,15 @@ set(CMAKE_DEPENDS_GENERATOR "Unix Makefiles")
 set(CMAKE_MAKEFILE_DEPENDS
   "CMakeCache.txt"
   "/Users/alexey/task/CMakeLists.txt"
-  "CMakeFiles/4.1.0/CMakeCCompiler.cmake"
-  "CMakeFiles/4.1.0/CMakeCXXCompiler.cmake"
-  "CMakeFiles/4.1.0/CMakeSystem.cmake"
+  "CMakeFiles/4.1.2/CMakeCCompiler.cmake"
+  "CMakeFiles/4.1.2/CMakeCXXCompiler.cmake"
+  "CMakeFiles/4.1.2/CMakeSystem.cmake"
   "/Users/alexey/task/student_file_1.txt"
   "/Users/alexey/task/student_file_2.txt"
   "/opt/homebrew/share/cmake/Modules/CMakeCInformation.cmake"
   "/opt/homebrew/share/cmake/Modules/CMakeCXXInformation.cmake"
   "/opt/homebrew/share/cmake/Modules/CMakeCommonLanguageInclude.cmake"
+  "/opt/homebrew/share/cmake/Modules/CMakeFindDependencyMacro.cmake"
   "/opt/homebrew/share/cmake/Modules/CMakeGenericSystem.cmake"
   "/opt/homebrew/share/cmake/Modules/CMakeInitializeConfigs.cmake"
   "/opt/homebrew/share/cmake/Modules/CMakeLanguageInformation.cmake"
@@ -43,6 +44,13 @@ set(CMAKE_MAKEFILE_DEPENDS
   "/opt/homebrew/share/cmake/Modules/Platform/Linker/Apple-AppleClang-CXX.cmake"
   "/opt/homebrew/share/cmake/Modules/Platform/Linker/Apple-AppleClang.cmake"
   "/opt/homebrew/share/cmake/Modules/Platform/UnixPaths.cmake"
+  "/usr/local/lib/cmake/ZeroMQ/ZeroMQConfig.cmake"
+  "/usr/local/lib/cmake/ZeroMQ/ZeroMQConfigVersion.cmake"
+  "/usr/local/lib/cmake/ZeroMQ/ZeroMQTargets-release.cmake"
+  "/usr/local/lib/cmake/ZeroMQ/ZeroMQTargets.cmake"
+  "/usr/local/share/cmake/cppzmq/cppzmqConfig.cmake"
+  "/usr/local/share/cmake/cppzmq/cppzmqConfigVersion.cmake"
+  "/usr/local/share/cmake/cppzmq/cppzmqTargets.cmake"
   )
 
 # The corresponding makefile is:
