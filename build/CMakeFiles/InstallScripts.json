@@ -1,0 +1,9 @@
+{
+	"InstallScripts" : 
+	[
+		"/Users/alexey/task/build/cmake_install.cmake",
+		"/Users/alexey/task/build/client/cmake_install.cmake",
+		"/Users/alexey/task/build/server/cmake_install.cmake"
+	],
+	"Parallel" : false
+}
