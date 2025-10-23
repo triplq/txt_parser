@@ -16,17 +16,11 @@ private:
 public:
     Person(std::string, std::string, int&, int&, int&);
 
-    int day() const;
-    int month() const;
-    int year() const;
     std::string name() const;
     std::string surname() const;
     std::string getData() const;
 
-    bool operator == (const Person& other) const;
-    bool operator != (const Person& other) const;
     bool operator < (const Person& other) const;
-    bool operator > (const Person& other) const;
 };
 
 std::ostream& operator<<(std::ostream& stream, const Person& pers);

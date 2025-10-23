@@ -34,13 +34,19 @@ void parse_file(string& file_name, vector<Person>& perses){
 
 vector<Person> only_unique(const vector<Person>& pers1, const vector<Person>& pers2){
     map<Person, size_t> big_pers_file;
-    for(size_t i = 0; i  < max(pers1.size(), pers2.size()); i++){
-        if(i < pers1.size())
+    array<thread, 2> th;
+    th[0] = thread([&](){
+        for(size_t i = 0; i  < pers1.size(); i++)
             big_pers_file.insert({pers1[i], 1});
-        if(i < pers2.size())
+    });
+    th[1] = thread([&](){
+        for(size_t i = 0; i < pers2.size(); i++)
             big_pers_file.insert({pers2[i], 1});
-    }
-    
+    });
+
+    th[0].join();
+    th[1].join();
+
     vector<Person> data_to_return;
     for(const auto& elem : big_pers_file){
             data_to_return.push_back(elem.first);
@@ -65,7 +71,7 @@ void to_file(const vector<Person>& vec){
     out.close();
 }
 
-int main(){
+void all_work_with_files(){
     string file_1{"student_file_1.txt"};
     string file_2{"student_file_2.txt"};
 
@@ -82,6 +88,10 @@ int main(){
     vector<Person> vec_to_send = only_unique(perses_file_1, perses_file_2);
 
     to_file(vec_to_send);
+}
+
+int main(){
+    all_work_with_files();
 
     return 0;
 }

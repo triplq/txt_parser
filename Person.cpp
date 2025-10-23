@@ -17,30 +17,12 @@ bool Person::isValid(int &day, int &month, int &year){
         return false;
 }
 
-int Person::day() const{ return day_; };
-int Person::month() const{ return month_; };
-int Person::year() const{ return year_; };
 std::string Person::name() const{ return name_; };
 std::string Person::surname() const{ return surname_; };
 std::string Person::getData() const{ return std::to_string(day_) + '.' + std::to_string(month_) + '.' + std::to_string(year_); };
 
-bool Person::operator==(const Person& other) const{
-    return name_ + surname_ == other.name() + other.surname() && this->getData() == other.getData();
-}
-
-bool Person::operator!=(const Person& other) const{
-    return name_ + surname_ != other.name() + other.surname() || this->getData() != other.getData();
-}
-
 bool Person::operator<(const Person& other) const{
-    if((name_ + surname_ < other.name() + other.surname()) || (name_ + surname_ == other.name() + other.surname() && this->getData() < other.getData()))
-        return true;
-    else
-        return false;
-};
-
-bool Person::operator>(const Person& other) const{
-    if((name_ + surname_ > other.name() + other.surname()) || (name_ + surname_ == other.name() + other.surname() && this->getData() > other.getData()))
+    if((name_ + surname_ < other.name_ + other.surname_) || (name_ + surname_ == other.name_ + other.surname_ && this->getData() < other.getData()))
         return true;
     else
         return false;
