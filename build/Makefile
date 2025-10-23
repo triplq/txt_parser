@@ -142,6 +142,19 @@ server/fast:
 	$(MAKE) $(MAKESILENT) -f server/CMakeFiles/server.dir/build.make server/CMakeFiles/server.dir/build
 .PHONY : server/fast
 
+#=============================================================================
+# Target rules for targets named Common
+
+# Build rule for target.
+Common: cmake_check_build_system
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 Common
+.PHONY : Common
+
+# fast build rule for target.
+Common/fast:
+	$(MAKE) $(MAKESILENT) -f Common/CMakeFiles/Common.dir/build.make Common/CMakeFiles/Common.dir/build
+.PHONY : Common/fast
+
 # Help Target
 help:
 	@echo "The following are some of the valid targets for this Makefile:"
@@ -150,6 +163,7 @@ help:
 	@echo "... depend"
 	@echo "... edit_cache"
 	@echo "... rebuild_cache"
+	@echo "... Common"
 	@echo "... client"
 	@echo "... server"
 .PHONY : help

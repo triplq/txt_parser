@@ -4,7 +4,7 @@
 # compile CXX with /usr/bin/c++
 CXX_DEFINES = -DZMQ_BUILD_DRAFT_API
 
-CXX_INCLUDES = 
+CXX_INCLUDES = -I/Users/alexey/task/Common
 
 CXX_FLAGSarm64 = -g -std=gnu++20 -arch arm64
 

@@ -227,6 +227,15 @@ client_IS_TOP_LEVEL:STATIC=OFF
 //Value Computed by CMake
 client_SOURCE_DIR:STATIC=/Users/alexey/task/client
 
+//Value Computed by CMake
+common_BINARY_DIR:STATIC=/Users/alexey/task/build/Common
+
+//Value Computed by CMake
+common_IS_TOP_LEVEL:STATIC=OFF
+
+//Value Computed by CMake
+common_SOURCE_DIR:STATIC=/Users/alexey/task/Common
+
 //The directory containing a CMake configuration file for cppzmq.
 cppzmq_DIR:PATH=/usr/local/share/cmake/cppzmq
 
@@ -347,7 +356,7 @@ CMAKE_MODULE_LINKER_FLAGS_RELWITHDEBINFO-ADVANCED:INTERNAL=1
 //ADVANCED property for variable: CMAKE_NM
 CMAKE_NM-ADVANCED:INTERNAL=1
 //number of local generators
-CMAKE_NUMBER_OF_MAKEFILES:INTERNAL=3
+CMAKE_NUMBER_OF_MAKEFILES:INTERNAL=4
 //ADVANCED property for variable: CMAKE_OBJCOPY
 CMAKE_OBJCOPY-ADVANCED:INTERNAL=1
 //ADVANCED property for variable: CMAKE_OBJDUMP

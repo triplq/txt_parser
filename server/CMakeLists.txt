@@ -8,6 +8,6 @@ find_package(cppzmq)
 configure_file(${CMAKE_SOURCE_DIR}/server/student_file_1.txt ${CMAKE_BINARY_DIR}/server/student_file_1.txt COPYONLY)
 configure_file(${CMAKE_SOURCE_DIR}/server/student_file_2.txt ${CMAKE_BINARY_DIR}/server/student_file_2.txt COPYONLY)
 
-add_executable(server main.cpp Person.h Person.cpp)
+add_executable(server main.cpp)
 
-target_link_libraries(server cppzmq)
+target_link_libraries(server cppzmq Common)

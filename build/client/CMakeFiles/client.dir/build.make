@@ -95,6 +95,7 @@ client_EXTERNAL_OBJECTS =
 
 client/client: client/CMakeFiles/client.dir/main.cpp.o
 client/client: client/CMakeFiles/client.dir/build.make
+client/client: Common/libCommon.a
 client/client: /usr/local/lib/libzmq.5.2.6.dylib
 client/client: /opt/homebrew/Cellar/gnutls/3.8.10/lib/libgnutls.dylib
 client/client: client/CMakeFiles/client.dir/link.txt

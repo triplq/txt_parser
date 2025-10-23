@@ -6,3 +6,6 @@
 /Users/alexey/task/build/server/CMakeFiles/server.dir
 /Users/alexey/task/build/server/CMakeFiles/edit_cache.dir
 /Users/alexey/task/build/server/CMakeFiles/rebuild_cache.dir
+/Users/alexey/task/build/Common/CMakeFiles/Common.dir
+/Users/alexey/task/build/Common/CMakeFiles/edit_cache.dir
+/Users/alexey/task/build/Common/CMakeFiles/rebuild_cache.dir

@@ -87,14 +87,14 @@ rebuild_cache/fast: rebuild_cache
 
 # The main all target
 all: cmake_check_build_system
-	cd /Users/alexey/task/build && $(CMAKE_COMMAND) -E cmake_progress_start /Users/alexey/task/build/CMakeFiles /Users/alexey/task/build/server//CMakeFiles/progress.marks
-	cd /Users/alexey/task/build && $(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 server/all
+	cd /Users/alexey/task/build && $(CMAKE_COMMAND) -E cmake_progress_start /Users/alexey/task/build/CMakeFiles /Users/alexey/task/build/Common//CMakeFiles/progress.marks
+	cd /Users/alexey/task/build && $(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 Common/all
 	$(CMAKE_COMMAND) -E cmake_progress_start /Users/alexey/task/build/CMakeFiles 0
 .PHONY : all
 
 # The main clean target
 clean:
-	cd /Users/alexey/task/build && $(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 server/clean
+	cd /Users/alexey/task/build && $(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 Common/clean
 .PHONY : clean
 
 # The main clean target
@@ -103,12 +103,12 @@ clean/fast: clean
 
 # Prepare targets for installation.
 preinstall: all
-	cd /Users/alexey/task/build && $(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 server/preinstall
+	cd /Users/alexey/task/build && $(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 Common/preinstall
 .PHONY : preinstall
 
 # Prepare targets for installation.
 preinstall/fast:
-	cd /Users/alexey/task/build && $(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 server/preinstall
+	cd /Users/alexey/task/build && $(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 Common/preinstall
 .PHONY : preinstall/fast
 
 # clear depends
@@ -117,42 +117,42 @@ depend:
 .PHONY : depend
 
 # Convenience name for target.
-server/CMakeFiles/server.dir/rule:
-	cd /Users/alexey/task/build && $(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 server/CMakeFiles/server.dir/rule
-.PHONY : server/CMakeFiles/server.dir/rule
+Common/CMakeFiles/Common.dir/rule:
+	cd /Users/alexey/task/build && $(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 Common/CMakeFiles/Common.dir/rule
+.PHONY : Common/CMakeFiles/Common.dir/rule
 
 # Convenience name for target.
-server: server/CMakeFiles/server.dir/rule
-.PHONY : server
+Common: Common/CMakeFiles/Common.dir/rule
+.PHONY : Common
 
 # fast build rule for target.
-server/fast:
-	cd /Users/alexey/task/build && $(MAKE) $(MAKESILENT) -f server/CMakeFiles/server.dir/build.make server/CMakeFiles/server.dir/build
-.PHONY : server/fast
+Common/fast:
+	cd /Users/alexey/task/build && $(MAKE) $(MAKESILENT) -f Common/CMakeFiles/Common.dir/build.make Common/CMakeFiles/Common.dir/build
+.PHONY : Common/fast
 
-main.o: main.cpp.o
-.PHONY : main.o
+Person.o: Person.cpp.o
+.PHONY : Person.o
 
 # target to build an object file
-main.cpp.o:
-	cd /Users/alexey/task/build && $(MAKE) $(MAKESILENT) -f server/CMakeFiles/server.dir/build.make server/CMakeFiles/server.dir/main.cpp.o
-.PHONY : main.cpp.o
+Person.cpp.o:
+	cd /Users/alexey/task/build && $(MAKE) $(MAKESILENT) -f Common/CMakeFiles/Common.dir/build.make Common/CMakeFiles/Common.dir/Person.cpp.o
+.PHONY : Person.cpp.o
 
-main.i: main.cpp.i
-.PHONY : main.i
+Person.i: Person.cpp.i
+.PHONY : Person.i
 
 # target to preprocess a source file
-main.cpp.i:
-	cd /Users/alexey/task/build && $(MAKE) $(MAKESILENT) -f server/CMakeFiles/server.dir/build.make server/CMakeFiles/server.dir/main.cpp.i
-.PHONY : main.cpp.i
+Person.cpp.i:
+	cd /Users/alexey/task/build && $(MAKE) $(MAKESILENT) -f Common/CMakeFiles/Common.dir/build.make Common/CMakeFiles/Common.dir/Person.cpp.i
+.PHONY : Person.cpp.i
 
-main.s: main.cpp.s
-.PHONY : main.s
+Person.s: Person.cpp.s
+.PHONY : Person.s
 
 # target to generate assembly for a file
-main.cpp.s:
-	cd /Users/alexey/task/build && $(MAKE) $(MAKESILENT) -f server/CMakeFiles/server.dir/build.make server/CMakeFiles/server.dir/main.cpp.s
-.PHONY : main.cpp.s
+Person.cpp.s:
+	cd /Users/alexey/task/build && $(MAKE) $(MAKESILENT) -f Common/CMakeFiles/Common.dir/build.make Common/CMakeFiles/Common.dir/Person.cpp.s
+.PHONY : Person.cpp.s
 
 # Help Target
 help:
@@ -162,10 +162,10 @@ help:
 	@echo "... depend"
 	@echo "... edit_cache"
 	@echo "... rebuild_cache"
-	@echo "... server"
-	@echo "... main.o"
-	@echo "... main.i"
-	@echo "... main.s"
+	@echo "... Common"
+	@echo "... Person.o"
+	@echo "... Person.i"
+	@echo "... Person.s"
 .PHONY : help
 
 

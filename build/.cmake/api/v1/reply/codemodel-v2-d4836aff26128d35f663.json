@@ -9,7 +9,8 @@
 					"childIndexes" : 
 					[
 						1,
-						2
+						2,
+						3
 					],
 					"jsonFile" : "directory-.-Debug-f5ebdc15457944623624.json",
 					"minimumCMakeVersion" : 
@@ -31,7 +32,7 @@
 					"source" : "client",
 					"targetIndexes" : 
 					[
-						0
+						1
 					]
 				},
 				{
@@ -46,7 +47,22 @@
 					"source" : "server",
 					"targetIndexes" : 
 					[
-						1
+						2
+					]
+				},
+				{
+					"build" : "Common",
+					"jsonFile" : "directory-Common-Debug-961c0da1854571906fb8.json",
+					"minimumCMakeVersion" : 
+					{
+						"string" : "3.10"
+					},
+					"parentIndex" : 0,
+					"projectIndex" : 3,
+					"source" : "Common",
+					"targetIndexes" : 
+					[
+						0
 					]
 				}
 			],
@@ -57,7 +73,8 @@
 					"childIndexes" : 
 					[
 						1,
-						2
+						2,
+						3
 					],
 					"directoryIndexes" : 
 					[
@@ -74,7 +91,7 @@
 					"parentIndex" : 0,
 					"targetIndexes" : 
 					[
-						0
+						1
 					]
 				},
 				{
@@ -86,23 +103,42 @@
 					"parentIndex" : 0,
 					"targetIndexes" : 
 					[
-						1
+						2
+					]
+				},
+				{
+					"directoryIndexes" : 
+					[
+						3
+					],
+					"name" : "common",
+					"parentIndex" : 0,
+					"targetIndexes" : 
+					[
+						0
 					]
 				}
 			],
 			"targets" : 
 			[
 				{
+					"directoryIndex" : 3,
+					"id" : "Common::@13b50f4fff9a3833e1fc",
+					"jsonFile" : "target-Common-Debug-9976384920c37cab9a81.json",
+					"name" : "Common",
+					"projectIndex" : 3
+				},
+				{
 					"directoryIndex" : 1,
 					"id" : "client::@b0c487aac068df482bf0",
-					"jsonFile" : "target-client-Debug-7482a5d29bb5ad446bf5.json",
+					"jsonFile" : "target-client-Debug-ec93641e3efef8097159.json",
 					"name" : "client",
 					"projectIndex" : 1
 				},
 				{
 					"directoryIndex" : 2,
 					"id" : "server::@d19778d2e34a1e3ddfc0",
-					"jsonFile" : "target-server-Debug-810925a1e1a74b168f59.json",
+					"jsonFile" : "target-server-Debug-e8208b4b028e967a8911.json",
 					"name" : "server",
 					"projectIndex" : 2
 				}

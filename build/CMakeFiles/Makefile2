@@ -65,22 +65,45 @@ CMAKE_BINARY_DIR = /Users/alexey/task/build
 # The main recursive "all" target.
 all: client/all
 all: server/all
+all: Common/all
 .PHONY : all
 
 # The main recursive "codegen" target.
 codegen: client/codegen
 codegen: server/codegen
+codegen: Common/codegen
 .PHONY : codegen
 
 # The main recursive "preinstall" target.
 preinstall: client/preinstall
 preinstall: server/preinstall
+preinstall: Common/preinstall
 .PHONY : preinstall
 
 # The main recursive "clean" target.
 clean: client/clean
 clean: server/clean
+clean: Common/clean
 .PHONY : clean
+
+#=============================================================================
+# Directory level rules for directory Common
+
+# Recursive "all" directory target.
+Common/all: Common/CMakeFiles/Common.dir/all
+.PHONY : Common/all
+
+# Recursive "codegen" directory target.
+Common/codegen: Common/CMakeFiles/Common.dir/codegen
+.PHONY : Common/codegen
+
+# Recursive "preinstall" directory target.
+Common/preinstall:
+.PHONY : Common/preinstall
+
+# Recursive "clean" directory target.
+Common/clean: Common/CMakeFiles/Common.dir/clean
+.PHONY : Common/clean
 
 #=============================================================================
 # Directory level rules for directory client
@@ -124,15 +147,15 @@ server/clean: server/CMakeFiles/server.dir/clean
 # Target rules for target client/CMakeFiles/client.dir
 
 # All Build rule for target.
-client/CMakeFiles/client.dir/all:
+client/CMakeFiles/client.dir/all: Common/CMakeFiles/Common.dir/all
 	$(MAKE) $(MAKESILENT) -f client/CMakeFiles/client.dir/build.make client/CMakeFiles/client.dir/depend
 	$(MAKE) $(MAKESILENT) -f client/CMakeFiles/client.dir/build.make client/CMakeFiles/client.dir/build
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --progress-dir=/Users/alexey/task/build/CMakeFiles --progress-num=1,2 "Built target client"
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --progress-dir=/Users/alexey/task/build/CMakeFiles --progress-num=3,4 "Built target client"
 .PHONY : client/CMakeFiles/client.dir/all
 
 # Build rule for subdir invocation for target.
 client/CMakeFiles/client.dir/rule: cmake_check_build_system
-	$(CMAKE_COMMAND) -E cmake_progress_start /Users/alexey/task/build/CMakeFiles 2
+	$(CMAKE_COMMAND) -E cmake_progress_start /Users/alexey/task/build/CMakeFiles 4
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 client/CMakeFiles/client.dir/all
 	$(CMAKE_COMMAND) -E cmake_progress_start /Users/alexey/task/build/CMakeFiles 0
 .PHONY : client/CMakeFiles/client.dir/rule
@@ -144,7 +167,7 @@ client: client/CMakeFiles/client.dir/rule
 # codegen rule for target.
 client/CMakeFiles/client.dir/codegen:
 	$(MAKE) $(MAKESILENT) -f client/CMakeFiles/client.dir/build.make client/CMakeFiles/client.dir/codegen
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --progress-dir=/Users/alexey/task/build/CMakeFiles --progress-num=1,2 "Finished codegen for target client"
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --progress-dir=/Users/alexey/task/build/CMakeFiles --progress-num=3,4 "Finished codegen for target client"
 .PHONY : client/CMakeFiles/client.dir/codegen
 
 # clean rule for target.
@@ -156,15 +179,15 @@ client/CMakeFiles/client.dir/clean:
 # Target rules for target server/CMakeFiles/server.dir
 
 # All Build rule for target.
-server/CMakeFiles/server.dir/all:
+server/CMakeFiles/server.dir/all: Common/CMakeFiles/Common.dir/all
 	$(MAKE) $(MAKESILENT) -f server/CMakeFiles/server.dir/build.make server/CMakeFiles/server.dir/depend
 	$(MAKE) $(MAKESILENT) -f server/CMakeFiles/server.dir/build.make server/CMakeFiles/server.dir/build
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --progress-dir=/Users/alexey/task/build/CMakeFiles --progress-num=3,4,5 "Built target server"
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --progress-dir=/Users/alexey/task/build/CMakeFiles --progress-num=5,6 "Built target server"
 .PHONY : server/CMakeFiles/server.dir/all
 
 # Build rule for subdir invocation for target.
 server/CMakeFiles/server.dir/rule: cmake_check_build_system
-	$(CMAKE_COMMAND) -E cmake_progress_start /Users/alexey/task/build/CMakeFiles 3
+	$(CMAKE_COMMAND) -E cmake_progress_start /Users/alexey/task/build/CMakeFiles 4
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 server/CMakeFiles/server.dir/all
 	$(CMAKE_COMMAND) -E cmake_progress_start /Users/alexey/task/build/CMakeFiles 0
 .PHONY : server/CMakeFiles/server.dir/rule
@@ -176,13 +199,45 @@ server: server/CMakeFiles/server.dir/rule
 # codegen rule for target.
 server/CMakeFiles/server.dir/codegen:
 	$(MAKE) $(MAKESILENT) -f server/CMakeFiles/server.dir/build.make server/CMakeFiles/server.dir/codegen
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --progress-dir=/Users/alexey/task/build/CMakeFiles --progress-num=3,4,5 "Finished codegen for target server"
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --progress-dir=/Users/alexey/task/build/CMakeFiles --progress-num=5,6 "Finished codegen for target server"
 .PHONY : server/CMakeFiles/server.dir/codegen
 
 # clean rule for target.
 server/CMakeFiles/server.dir/clean:
 	$(MAKE) $(MAKESILENT) -f server/CMakeFiles/server.dir/build.make server/CMakeFiles/server.dir/clean
 .PHONY : server/CMakeFiles/server.dir/clean
+
+#=============================================================================
+# Target rules for target Common/CMakeFiles/Common.dir
+
+# All Build rule for target.
+Common/CMakeFiles/Common.dir/all:
+	$(MAKE) $(MAKESILENT) -f Common/CMakeFiles/Common.dir/build.make Common/CMakeFiles/Common.dir/depend
+	$(MAKE) $(MAKESILENT) -f Common/CMakeFiles/Common.dir/build.make Common/CMakeFiles/Common.dir/build
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --progress-dir=/Users/alexey/task/build/CMakeFiles --progress-num=1,2 "Built target Common"
+.PHONY : Common/CMakeFiles/Common.dir/all
+
+# Build rule for subdir invocation for target.
+Common/CMakeFiles/Common.dir/rule: cmake_check_build_system
+	$(CMAKE_COMMAND) -E cmake_progress_start /Users/alexey/task/build/CMakeFiles 2
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 Common/CMakeFiles/Common.dir/all
+	$(CMAKE_COMMAND) -E cmake_progress_start /Users/alexey/task/build/CMakeFiles 0
+.PHONY : Common/CMakeFiles/Common.dir/rule
+
+# Convenience name for target.
+Common: Common/CMakeFiles/Common.dir/rule
+.PHONY : Common
+
+# codegen rule for target.
+Common/CMakeFiles/Common.dir/codegen:
+	$(MAKE) $(MAKESILENT) -f Common/CMakeFiles/Common.dir/build.make Common/CMakeFiles/Common.dir/codegen
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --progress-dir=/Users/alexey/task/build/CMakeFiles --progress-num=1,2 "Finished codegen for target Common"
+.PHONY : Common/CMakeFiles/Common.dir/codegen
+
+# clean rule for target.
+Common/CMakeFiles/Common.dir/clean:
+	$(MAKE) $(MAKESILENT) -f Common/CMakeFiles/Common.dir/build.make Common/CMakeFiles/Common.dir/clean
+.PHONY : Common/CMakeFiles/Common.dir/clean
 
 #=============================================================================
 # Special targets to cleanup operation of make.
